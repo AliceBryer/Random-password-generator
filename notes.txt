@@ -46,3 +46,138 @@ Criteria
 ---lowercase - "abcdefghijklmnopqrstuvwxyz"
 ---numeric - "0123456789"
 ---special characters - " !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+
+
+
+
+
+
+// // // function two - get password criteria
+
+
+// declare 
+// var upCase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+// var lowCase = ("abcdefghijklmnopqrstuvwxyz")
+// var num = ("0123456789")
+// var spCh = (" !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~")
+
+// function getPasswordCritera (){
+
+// we don't want to use the confirm to assign as this is changing the value, which then means the array at the end doesn't work
+// }
+var criteria = [];
+var upCase = confirm("In your password would you like to include uppercase characters?");
+
+if (
+  upCase === true) {
+    criteria.push ("upCase")
+  };
+
+var lowCase = confirm("In your password would you like to include lowercase characters?");
+
+if (
+    lowCase === true) {
+      criteria.push ("lowCase")
+  };
+
+var num = confirm ("In your password would you like to include numberic characters?");
+
+if (
+    num === true) {
+      criteria.push ("num")
+    };
+
+var spCh = confirm("In your password would you like to include special characters?");
+
+if (
+      spCh === true) {
+        criteria.push ("spCh")
+  };
+
+console.log(criteria.length)
+
+
+ if (criteria.length >=1) 
+ {alert ("You may now get a password. Please select the Generate Password Button.")
+}
+
+// this could be set as an alert maybe instead of document.write
+
+ else {alert ("You must select at least one of the four criteria. Please refresh & start again")
+};
+
+console.log(criteria)
+
+
+
+// // console.log{success, you will now get a password}
+
+// // else;
+// // console.log (you must pick at least one choice!)
+
+// 
+
+// // Function three
+// for loop needed here 
+
+
+
+
+
+
+
+
+
+//  const generateBtn = document.querySelector("#generate");
+
+
+// };
+// const getPasswordCriteria = () => {
+//   return [
+//     "0123456789",
+//      "abcdefghijklmnopqrstuvwxyz",
+//       "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+//        " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~",
+//       ];
+// };
+
+// const createRandomPassword = () => {
+// return "kdUE28(@d0";
+// };
+
+// //main function to generate the random password
+
+// const generatePassword = () => {
+
+// // all your code goes here to generate a password
+
+// // get password length - function 1
+// const passwordLength = getPasswordlength();
+// console.log(passwordLength);
+// // get password critera - function 2
+// const passwordCriteria = getPasswordCriteria();
+// // create random password - function 3
+// const password =createRandomPassword(passwordLength,passwordCriteria)
+
+// return password;
+// };
+
+
+
+
+
+// // Write password to the #password input
+// function writePassword() {
+//   //  line 20 is calling another function
+//   var password = generatePassword();   
+//   // this targets the box 
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+
+// }
+
+// // Add event listener to generate button
+// // this is stating that when the generateBtn is clicked , that the 'writePassword' function (line 18) is executed
+// generateBtn.addEventListener("click", writePassword);
+
