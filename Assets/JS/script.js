@@ -77,6 +77,7 @@ console.log(criteria)
 var randomChoice = (Math.floor(Math.random() * criteria.length))
 
 console.log(randomChoice)
+
 // randomChoice will give us an index number in the array.
 
 // ok we now have passwordLength, passwordCriteria, and randomChoice 
@@ -85,9 +86,10 @@ console.log(randomChoice)
 var finalPassword = [];
 
  for (let i = 0; i < passwordLength.Length; i++) {
-
-  console.log (i)
+console.log (i)
 }
+
+
 
 // questions for Sina/new tutor -
 // when alert for passwordLength is displayed is there
