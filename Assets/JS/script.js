@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 var passwordLength = prompt("Please select the number of characters you wish to have in your password. Hint: Secure passwords are more than 8 characters");
 
-// function getPasswordLength (){
+
 
 if(isNaN(passwordLength)){
   alert ("You must enter a numeric value! Please refresh your page & start again!")
@@ -15,6 +15,7 @@ alert("Thanks, you may now select your criteria!")
   alert("Reminder - you must choose a value between 8 & 128 to be secure!")
 }
 console.log(passwordLength)
+
 
 
 
@@ -67,7 +68,8 @@ console.log(criteria)
 
 var finalArray = [];
 
-// then we need a for loop, which will give us an array of characters.
+// then is a for loop, which will give us an
+// array of characters as per the length the user has inputted.
 
  for(let i = 0; i < passwordLength; i++) {
 
@@ -96,4 +98,12 @@ console.log (finalArray)
 
  var passwordText = document.querySelector("#password");
 
+//this is adding the onclick event so that the user can physically
+//see their password on the page 
+
+ generateBtn.addEventListener("click", function ()
+ {
+   passwordText.placeholder = finalPassword
+ 
+ })
 
