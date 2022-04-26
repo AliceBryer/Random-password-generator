@@ -1,4 +1,6 @@
 // // // Assignment Code
+var generateBtn = document.querySelector("#generate");
+
 var passwordLength = prompt("Please select the number of characters you wish to have in your password. Hint: Secure passwords are more than 8 characters");
 
 // function getPasswordLength (){
@@ -13,7 +15,8 @@ alert("Thanks, you may now select your criteria!")
   alert("Reminder - you must choose a value between 8 & 128 to be secure!")
 }
 console.log(passwordLength)
- 
+
+
 
 // Function 2 - getPasswordCriteria
 
@@ -24,7 +27,6 @@ var spCh = (" !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~")
 
 // function getPasswordCritera (){
 
-// }
 var criteria = [];
 
 var ans1 = confirm("In your password would you like to include uppercase characters?");
@@ -61,14 +63,11 @@ console.log(criteria.length)
 console.log(criteria)
 
 //   function generatePassword 
-
-// randomChoice will give us an index number in the array.
-// ok we now have passwordLength, passwordCriteria, and randomChoice 
-
 // an empty array to store our password in
+
 var finalArray = [];
 
-// then we need a for loop, which will give us an array of characters as per the password.Length & criteria
+// then we need a for loop, which will give us an array of characters.
 
  for(let i = 0; i < passwordLength; i++) {
 
@@ -82,11 +81,19 @@ console.log (randomString)
 
 var randomCharacter = randomString[Math.floor(Math.random()*randomString.length)];
 
+// this is us pushing the characters into an empty array
+
 finalArray.push(randomCharacter)
 }
 
 console.log (finalArray)
 
+// this is us breaking down the array so that it is one string
+
  var finalPassword = finalArray.join('');
 
  console.log (finalPassword)
+
+ var passwordText = document.querySelector("#password");
+
+
