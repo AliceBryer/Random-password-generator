@@ -6,19 +6,14 @@ var passwordLength = prompt("Please select the number of characters you wish to 
 if(isNaN(passwordLength)){
   alert ("You must enter a numeric value! Please refresh your page & start again!")
 }
-
  else if (passwordLength >=8 && passwordLength <=128) {
 alert("Thanks, you may now select your criteria!")
  }
-
-else  {
+ else  {
   alert("Reminder - you must choose a value between 8 & 128 to be secure!")
 }
-
 console.log(passwordLength)
  
-
-
 
 // Function 2 - getPasswordCriteria
 
@@ -33,14 +28,11 @@ var spCh = (" !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~")
 var criteria = [];
 
 var ans1 = confirm("In your password would you like to include uppercase characters?");
-var ans2 = confirm("In your password would you like to include lowercase characters?");
 
 if (ans1 == true) {
   criteria.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 }
-
 var ans2 = confirm("In your password would you like to include lowercase characters?");
-
 if (ans2== true) {
   criteria.push ("abcdefghijklmnopqrstuvwxyz")
 }
@@ -68,31 +60,33 @@ else {
 console.log(criteria.length)
 console.log(criteria)
 
-// at this point we now need function 3, 
-// we have the passwordLength stored in a variable and we also have an array called criteria. 
-
-
-// //  function generatePassword 
-
-var randomChoice = (Math.floor(Math.random() * criteria.length))
-
-console.log(randomChoice)
+//   function generatePassword 
 
 // randomChoice will give us an index number in the array.
-
 // ok we now have passwordLength, passwordCriteria, and randomChoice 
 
 // an empty array to store our password in
-var finalPassword = [];
+var finalArray = [];
 
- for (let i = 0; i < passwordLength.Length; i++) {
-console.log (i)
+// then we need a for loop, which will give us an array of characters as per the password.Length & criteria
+
+ for(let i = 0; i < passwordLength; i++) {
+
+  var randomIndex = (Math.floor(Math.random() * criteria.length))
+
+console.log(randomIndex)
+
+var randomString = criteria[randomIndex];
+
+console.log (randomString)
+
+var randomCharacter = randomString[Math.floor(Math.random()*randomString.length)];
+
+finalArray.push(randomCharacter)
 }
 
+console.log (finalArray)
 
+ var finalPassword = finalArray.join('');
 
-// questions for Sina/new tutor -
-// when alert for passwordLength is displayed is there
-//  anyway we can send the user back to the original question?
-
-// then need to ask about the for loop
+ console.log (finalPassword)
