@@ -3,8 +3,6 @@ var generateBtn = document.querySelector("#generate");
 
 var passwordLength = prompt("Please select the number of characters you wish to have in your password. Hint: Secure passwords are more than 8 characters");
 
-
-
 if(isNaN(passwordLength)){
   alert ("You must enter a numeric value! Please refresh your page & start again!")
 }
@@ -101,9 +99,7 @@ console.log (finalArray)
 //this is adding the onclick event so that the user can physically
 //see their password on the page 
 
- generateBtn.addEventListener("click", function ()
- {
-   passwordText.placeholder = finalPassword
+passwordText.placeholder = finalPassword;
  
- })
+
 
