@@ -1,6 +1,9 @@
 // // // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+generateBtn.addEventListener("click", function ()
+ {
+
 var passwordLength = prompt("Please select the number of characters you wish to have in your password. Hint: Secure passwords are more than 8 characters");
 
 if(isNaN(passwordLength)){
@@ -96,10 +99,9 @@ console.log (finalArray)
 
  var passwordText = document.querySelector("#password");
 
-//this is adding the onclick event so that the user can physically
-//see their password on the page 
+//  that the user can physically see their password on the page 
 
-passwordText.placeholder = finalPassword;
+passwordText.placeholder = finalPassword
  
-
+ });
 
